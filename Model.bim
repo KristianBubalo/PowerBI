@@ -823,7 +823,7 @@
           },
           {
             "name": "Test",
-            "expression": "[Revenue as Measure] * 0.9",
+            "expression": "[Revenue as Measure] * 2",
             "lineageTag": "da47251b-26c7-4eda-a1d5-a808fcd458dd",
             "annotations": [
               {
