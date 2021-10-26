@@ -228,21 +228,6 @@
             }
           }
         ],
-        "measures": [
-          {
-            "name": "Revenue as Measure",
-            "expression": "SUM(Sales[Revenue])",
-            "formatString": "0",
-            "displayFolder": "KPI",
-            "lineageTag": "6343438b-6499-4ae5-abbc-21820e3ce1f8",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
-              }
-            ]
-          }
-        ],
         "annotations": [
           {
             "name": "PBI_QueryRelationships",
@@ -802,6 +787,47 @@
             "value": "Table"
           }
         ]
+      },
+      {
+        "name": "KPIs",
+        "lineageTag": "09c1b746-c31d-4d2e-9829-c575022c7e41",
+        "partitions": [
+          {
+            "name": "KPIs-afbb11c3-a38c-404a-8c8d-cce3389e1380",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WSlSKjQUA\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Revenue as Measure",
+            "expression": "SUM(Sales[Revenue])",
+            "formatString": "0",
+            "lineageTag": "6343438b-6499-4ae5-abbc-21820e3ce1f8",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
       }
     ],
     "relationships": [
@@ -978,7 +1004,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Sales\",\"Sample File Parameter1\",\"Transform Sample File from Excelsheets\",\"Sample File\",\"Transform File from Excelsheets\",\"Country\"]"
+        "value": "[\"Sales\",\"Sample File Parameter1\",\"Transform Sample File from Excelsheets\",\"Sample File\",\"Transform File from Excelsheets\",\"Country\",\"KPIs\"]"
       },
       {
         "name": "TabularEditor_SerializeOptions",
