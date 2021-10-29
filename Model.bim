@@ -1,5 +1,5 @@
 {
-  "name": "SemanticModel",
+  "name": "Connect to folder combined with Flow",
   "compatibilityLevel": 1550,
   "model": {
     "culture": "en-US",
@@ -823,7 +823,7 @@
           },
           {
             "name": "Test",
-            "expression": "[Revenue as Measure] * 0.9",
+            "expression": "[Revenue as Measure] * 10",
             "lineageTag": "da47251b-26c7-4eda-a1d5-a808fcd458dd",
             "annotations": [
               {
@@ -860,7 +860,15 @@
     ],
     "cultures": [
       {
-        "name": "en-US"
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "1.0.0",
+            "Language": "en-US",
+            "DynamicImprovement": "HighConfidence"
+          },
+          "contentType": "json"
+        }
       }
     ],
     "perspectives": [
@@ -1012,12 +1020,7 @@
       {
         "name": "TabularEditor_SerializeOptions",
         "value": "{\"IgnoreInferredObjects\":true,\"IgnoreInferredProperties\":true,\"IgnoreTimestamps\":true,\"SplitMultilineStrings\":true,\"PrefixFilenames\":false,\"LocalTranslations\":false,\"LocalPerspectives\":false,\"LocalRelationships\":false,\"Levels\":[\"Data Sources\",\"Perspectives\",\"Relationships\",\"Roles\",\"Tables\",\"Tables/Columns\",\"Tables/Hierarchies\",\"Tables/Measures\",\"Tables/Partitions\",\"Tables/Calculation Items\",\"Translations\"]}"
-      },
-      {
-        "name": "__BNorm",
-        "value": "1"
       }
     ]
-  },
-  "id": "SemanticModel"
+  }
 }
