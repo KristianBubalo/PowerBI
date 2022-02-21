@@ -820,17 +820,6 @@
                 "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
               }
             ]
-          },
-          {
-            "name": "Test",
-            "expression": "[Revenue as Measure] * 15",
-            "lineageTag": "da47251b-26c7-4eda-a1d5-a808fcd458dd",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"General\" />"
-              }
-            ]
           }
         ],
         "annotations": [
